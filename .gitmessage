@@ -2,20 +2,10 @@
 # <Type>: <Subject text> # 50-char limit #########
 # 72-character lines for description ###################################
 
-# Why:
+# docs: Write a concise subject for each commit
 
-# Related Issues:
-
-# References:
-
-# Run git config commit.template .gitmessage
-# Use git commit when committing files, and this template will be used.
-
-# Example commit message:
-# chore: Add commit message template
-
-# Captitalize subject line.
 # Write capitalized imperative statement with no period for subject
+# Leave an empty line between the subject and the body
 # List details of significant changes below the subject line
 # Write details as capitalized imperative statements
 # Provide the below sections for further context

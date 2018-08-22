@@ -102,7 +102,7 @@ def CommitFileIsValid(commit_file_name):
     return True
 
 
-if __name__ == "__main__":
+if __name__ == "__main__": # pragma: no cover
     if True == CommitFileIsValid(sys.argv[1]):
         exit(0)
     exit(1)
