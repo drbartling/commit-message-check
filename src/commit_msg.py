@@ -24,6 +24,10 @@ def LabelFromSubject(subject):
 
 
 def SubjectIsValid(subject):
+    subject = subject.strip()
+    if SubjectIsBlank(subject) is True:
+        return False
+
     if SubjectHasLabel(subject) is not True:
         return False
 
@@ -34,6 +38,13 @@ def SubjectIsValid(subject):
         return False
 
     return True
+
+
+def SubjectIsBlank(subject):
+    if not subject:
+        print('Subject line is empty.')
+        return True
+    return False
 
 
 def SubjectHasLabel(subject):
@@ -76,6 +87,7 @@ def CommitFileIsValid(commit_file_name):
 
         subject_line = commit_file.readline()
         if SubjectIsValid(subject_line) is not True:
+            print("Subject: '" + subject_line.strip() + "'")
             print("Subject is not formatted correctly.  See .gitmessage.")
             return False
 
@@ -105,4 +117,5 @@ def CommitFileIsValid(commit_file_name):
 if __name__ == "__main__": # pragma: no cover
     if True == CommitFileIsValid(sys.argv[1]):
         exit(0)
+    print('Aborting Commit.')
     exit(1)

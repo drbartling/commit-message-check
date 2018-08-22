@@ -58,6 +58,7 @@ subjects = [
     ("this: Subject is too long text text text text text text textt", False),
     ("This subject has no label", False),
     ("this: subject should be capitalized", False),
+    ("", False),
 ]
 @pytest.mark.parametrize("subject, expected", subjects)
 def test_SubjectIsValid(subject, expected):
